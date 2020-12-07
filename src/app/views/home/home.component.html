@@ -1,0 +1,132 @@
+<!-- Main Home Page content -->
+<div id="home">
+  <div class="home_container">
+    <div class="container p-t">
+      <!-- Welcome Text Section -->
+      <article class="row  home-content">
+        <article class="col-md-4" style="padding-top: 10%;">
+          <h2>
+            <strong>Welcome to <br> <span class="typeText"></span></strong>
+          </h2>
+          <p class="pt-4">
+            Tired of searching recipes on different sites? You can get list of all recipes...
+          </p>
+          <p class="learn-more pt-3">
+            <button type="button"> <a [ngx-scroll-to]="'#about'">Intersted ? Lets Start</a> </button>
+          </p>
+        </article>
+        <article class="col-md-8 text-center">
+          <article class="home-content" data-aos="fade-in" data-aos-duration="1500">
+            <img src="../../../assets/img/home-food.png" class="img-fluid text-center" />
+          </article>
+        </article>
+      </article>
+      <article class="row">
+        <section class="col-md-12 play-store">
+          <ul>
+            <li><img src="../../../assets/img/App-Store-01.png" class="img-fluid" /></li>
+            <li><img src="../../../assets/img/play-store.png" class="img-fluid" /></li>
+          </ul>
+        </section>
+
+      </article>
+    </div>
+  </div>
+</div>
+<!--  Recipes List Page -->
+<div id="about" class="mt-1">
+  <div class="container">
+    <section class="row">
+      <section class="col-md-12">
+        <h1 data-aos="zoom-in" data-aos-duration="1200">ALL My Recipes</h1>
+      </section>
+    </section>
+    <!-- Listing section starts from here -->
+    <section class="row">
+      <section class="section lb">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+              <div class="page-wrapper">
+                <div class="blog-list clearfix">
+                  <div *ngFor="let recipe of recipeList">
+                 
+                    <div class="blog-box row">
+                      <div class="col-md-4">
+                        <div class="post-media">
+                          <a href="" title="">
+                            <img src={{recipe.image}} alt="" class="img-fluid">
+                            <div class="hovereffect"></div>
+                          </a>
+                        </div><!-- end media -->
+                      </div><!-- end col -->
+  
+                      <div class="blog-meta big-meta col-md-8">
+                        <div class="rating">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </div>
+                        <h4><a href="" title="">{{recipe.name}} </a></h4>
+                        <p>{{recipe.preprationSteps}}</p>
+                        <small><a href="" title="">{{recipe.ingredients}}</a></small>
+                        <small><a href="" title="">{{recipe.Last_Updated_Date | date:'fullDate'}} </a></small>
+                        <small><a href="" title=""> by {{recipe.Updated_By}}</a></small>
+                      </div><!-- end meta -->
+                    </div><!-- end blog-box -->
+                    <hr class="invis">
+                    <hr class="invis">
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div><!-- end row -->
+        </div><!-- end container -->
+      </section>
+    </section>
+    <!-- Listing Ends Here -->
+  </div>
+</div>
+<!-- Contact me  -->
+<div id="contact" class="mt-1">
+  <div class="container">
+    <section class="row ">
+      <div class="col-md-12">
+        <h1 data-aos="zoom-in" data-aos-duration="1200">Contact Us </h1>
+      </div>
+    </section>
+    <section class="row mt-5">
+      <section class="col-md-1 text-center"></section>
+      <section class="col-md-3 text-center">
+        <h2 class="pt-4"> We would love to hear from you</h2>
+      </section>
+      <section class="col-md-3 text-center">
+        <img src="../../../assets/img/contact-phone.png" class="img-fluid text-center" />
+      </section>
+      <section class="col-md-5">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn send-button">Submit</button>
+        </form>
+      </section>
+    </section>
+
+  </div>
+
+</div>

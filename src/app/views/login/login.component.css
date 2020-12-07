@@ -1,0 +1,63 @@
+.Main {
+    min-height: 100%;
+    align-content: center;
+    background-image: url('../../../assets/img/back.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Main .card {
+    min-width: 30%;
+    min-height: 50vh;
+}
+
+.login-inputs {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.font-size {
+    font-size: 12px;
+}
+
+.login100-social-item {
+    font-size: 16px;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.login100-social-item:hover {
+    color: #fff;
+    background-color: #333333;
+}
+
+.bg1 {
+    background-color: #3b5998
+}
+
+.bg2 {
+    background-color: #1da1f2
+}
+
+.bg3 {
+    background-color: #ea4335
+}
+.login_btn{
+    background: #DD585F;
+    color: white;
+    border: none;
+    width: 15%;
+    border-radius: 25px;}
+ 

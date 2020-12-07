@@ -1,0 +1,354 @@
+
+/* Main Page CSS */
+
+*,:after,:before{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+body,html{
+    font-size:100%;
+    padding:0;
+    margin:0;
+} 
+@media only screen and (max-width: 600px) {
+.p-t{
+    padding-top: inherit;
+}
+
+}
+.navbar-custom {
+    background: rgba(255,255,255,1);
+    /*box-shadow: 0 3px 6px rgba(0,0,0,0.7);*/
+    top: 0 !important;
+    
+}
+
+.navbar-custom .navbar-brand{
+    color: black;
+    padding: 0.8rem 1rem;
+    
+}
+/* change the link color and add padding for height */ 
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 16px;
+} 
+/* change the color of active or hovered links */
+
+.navbar-custom .nav-item:hover .nav-link {
+    color: white;
+    background-color:black; 
+} 
+
+.navbar img{
+    height: 70px;
+    width : auto;
+} 
+
+.log-in-button {
+    padding: 1% 6%;
+}
+
+.btn-login {
+    background: #bd1d46;
+    color: white;
+    border:none;
+    width:15%;
+    border-radius: 25px;
+}
+
+.text-center {
+    text-align: center;
+}
+/*.log-in-button button{
+    background: #bd1d46;
+    color: white;
+    padding: 2%;
+    border-radius: 20px;
+    border:none;
+}*/
+
+/*****HOME SECTION******/
+
+
+.home_container{
+   background:url(../../../assets/img/HomeBackground-1.jpg) repeat center top;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    height:auto;
+    width:100%;
+    padding-top:8%;
+    padding-bottom:3%;
+    color:#2b2b2b;
+    text-align: left;
+}
+
+.home-content h2{
+    letter-spacing:1px;
+    font-weight: 700;
+    font-size:40px;
+    text-align: left;
+    color:#bd1d46!important;
+    font-family: 'Montserrat', sans-serif;    
+} 
+
+
+
+.learn-more button{
+    font-size:14px;
+    background: #bd1d46;
+    color:#fff;
+    border: none;
+    padding: 3% 6%;
+    border-radius: 27px;
+    
+} 
+
+.learn-more button a {
+    color:#fff;
+} 
+
+.home-content img {
+    margin: 0 auto;
+    text-align: center;
+    
+} 
+
+.play-store ul {
+  margin: 37px 0px 0px 0px;  
+  text-align: center;  
+}
+
+
+.play-store ul li{
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+} 
+
+.play-store img {
+    height: 60px;
+    width:auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/*****ABOUT US SERVICE******/
+
+#about{
+        background:url(../../../assets/img/AboutUs-Bg.jpg) repeat center top;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+        height:auto;
+        width:100%;
+        padding:6% 0;
+    }
+
+
+
+
+#about h1 {
+    letter-spacing:3px;
+    font-size: 45px;
+    font-weight:normal;
+    color: #bd1d46;
+    padding-bottom:1% ;
+    font-family: 'Montserrat', sans-serif;   
+    text-align: center;
+} 
+
+#about h2{
+    letter-spacing:1px;
+    font-weight: 700;
+    font-size:37px;
+    text-align: left;
+    color:#bd1d46!important;
+    font-family: 'Montserrat', sans-serif;    
+} 
+
+
+#about p {
+    text-align:left;
+}
+
+/*****OUR SERVICES SECTION******/
+#service{
+        background:url(../../..//assets/img/Service-Bg.jpg) repeat center top;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+        height:auto;
+        width:100%;
+        padding:6% 0;
+    }
+
+
+
+
+#service h1 {
+    letter-spacing:3px;
+    font-size: 45px;
+    font-weight:normal;
+    color: #bd1d46;
+    padding-bottom:1% ;
+    font-family: 'Montserrat', sans-serif;   
+    text-align: center;
+} 
+
+
+
+
+/*****CONTACT SECTION******/
+
+
+#contact {
+        background:url(../../../assets/img/ContactUs-Bg.jpg) repeat center top;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+        height:auto;
+        width:100%;
+        padding:5% 0 15% 0;
+        letter-spacing: 2px;
+      color:#2b2b2b;
+    }
+
+
+#contact h1 {
+    font-size: 45px;
+    font-weight:normal;
+    color: #bd1d46;
+    padding-bottom:1% ;
+    font-family: 'Montserrat', sans-serif;   
+    text-align: center;
+} 
+
+#contact h2{
+    letter-spacing:1px;
+    font-weight: 700;
+    font-size:37px;
+    text-align: left;
+    margin-top: 14%;
+    color:#bd1d46!important;
+    font-family: 'Montserrat', sans-serif;    
+} 
+
+
+#contact button{
+    font-size:14px;
+    background: #bd1d46;
+    color:#fff;
+    border: none;
+    padding: 2% 5%;
+    border-radius: 27px;
+    float: right;
+    
+} 
+
+
+#contact h1 span {
+    border-top: 9px solid #69d2e7;
+}
+
+#contact h4 {
+ margin-top:7%;
+}
+
+
+footer {
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    padding-top:1%;
+    letter-spacing: 2px;
+} 
+
+.footer-img img {
+    height:75px;
+    width:auto;
+}
+
+
+ 
+/* @import url(https://fonts.googleapis.com/css?family=Raleway:400,500); */
+.snip1189 {
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    
+  }
+  .snip1189 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  .snip1189 li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0 0.5em;
+    padding: 0;
+  }
+  .snip1189 a {
+    padding: 0.5em 0.5em;
+    margin: 0.2em 0;
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    text-decoration: none;
+  }
+  .snip1189 a:before,
+  .snip1189 a:after {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+  }
+  .snip1189 a:before {
+    left: 0;
+    top: 0;
+    border-left: 3px solid #c0392b;
+    border-top: 3px solid #c0392b;
+    -webkit-transform: translate(100%, 50%);
+    transform: translate(100%, 50%);
+  }
+  .snip1189 a:after {
+    right: 0;
+    bottom: 0;
+    border-right: 3px solid #c0392b;
+    border-bottom: 3px solid #c0392b;
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+  }
+  .snip1189 a:hover,
+  .snip1189 .current a {
+    color: #ffffff;
+  }
+  .snip1189 a:hover:before,
+  .snip1189 .current a:before,
+  .snip1189 a:hover:after,
+  .snip1189 .current a:after {
+    -webkit-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+
+
+

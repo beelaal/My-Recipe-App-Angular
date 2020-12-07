@@ -1,0 +1,17 @@
+.logo{
+    height: 60px;
+    width: auto;
+}
+.img-size{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.nav_login-btn{ 
+    width: 6rem;
+    height: 35px;
+    border-radius: 2rem;
+    min-height: auto;
+    font-size: 12px;
+    font-weight: bold !important;
+}

@@ -1,0 +1,117 @@
+<div class="wrapper">
+  <!-- Page Content Holder -->
+  <div id="content">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar" class="d-none d-sm-block">
+      <div class="sidebar-header"> <a routerLink="/">
+        <img class="logo" src="./../../../assets/img/log.jpg" width="34" height="183"></a>
+      </div>
+      <ul class="list-unstyled components">
+        <li routerLinkActive="active">
+          <a routerLink="/app/dashboard">
+            <i class="MT-home"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/app/recipe">
+            <i class="MT-ads-social"></i>
+            <span>Add New Reciepe</span>
+          </a>
+        </li> 
+        <li routerLinkActive="active">
+          <a routerLink="/app/recipeList">
+            <i class="MT-bars"></i>
+            <span>All Recipes</span>
+          </a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/app/settings">
+            <i class="MT-cogs"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+        <li class="sidebar-logout">
+          <a (click) ="logOut()"  routerLink="/">
+            <i id="logIcon" class="MT-logout"></i>
+            <i id="sadEmojo" class="MT-sad"></i>
+            <span> Logout </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div id="content-body">
+      <!-- nav -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="align-items-center d-flex navbar-header w-100">
+            <h2 class="d-none d-sm-block m-0 page-title text-capitalize">{{title}}</h2>
+            <div class="media ml-sm-auto">
+              <span *ngIf ='profileImage'>
+              <img class="border p-1 mr-2 rounded-circle custom-shadow"
+                [src]="profileImage"
+                width="50" alt="Generic placeholder image"></span>
+              <span *ngIf ='!profileImage'>
+              <img class="border p-1 mr-2 rounded-circle custom-shadow"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAZqtuUyXDhXtKMlsB66wnnsel7CbLHlJOR9n1dEOYabDTipgEg"
+                width="50" alt="Generic placeholder image"></span>
+              <div class="media-body text-nowrap p-1">
+                <p class="m-0 w-100 text-muted">{{currentUserName}}</p>
+              </div>
+            </div>
+            <button class="navbar-toggler ml-auto btn-pink d-block d-sm-none" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-list-ul"></i> </button>
+          </div>
+          <div class="align-items-center d-flex navbar-header w-100 d-block d-sm-none">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto py-2">
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/app/dashboard">
+                    <i class="MT-home pr-2 pl-1"></i>
+                    <span>Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/app/reports">
+                    <i class="MT-bars pr-2 pl-1"></i>
+                    <span>Reports</span>
+                  </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/app/recipe">
+                    <i class="MT-ads-social pr-2 pl-1"></i>
+                    <span>Add New Recipe</span>
+                  </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/app/recipeList">
+                    <i class="MT-coins-user pr-2 pl-1"></i>
+                    <span>Recipe List</span>
+                  </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/app/settings">
+                    <i class="MT-cogs pr-2 pl-1"></i>
+                    <span>Settings</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click) ="logOut()" routerLink="/">
+                    <i class="MT-logout pr-2 pl-1"></i>
+                    <span> Logout </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

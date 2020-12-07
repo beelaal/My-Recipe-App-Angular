@@ -1,0 +1,18 @@
+<!-- dialog-box.component.html -->
+<div>
+  <h1 mat-dialog-title class="text-main">Delete</h1>
+  <div class="py-2">
+    <div class="card border-0 custom-shadow p-3">
+      <div class="card-body border-0  p-3">
+        <div mat-dialog-content class="text-main">
+          Are you sure to Delete?
+        </div>
+      </div>
+    </div>
+    <div mat-dialog-actions align="end">
+      <button mat-button (click)="deleteRecipe()" mat-flat-button color="warn">YES</button>
+      <button mat-button (click)="closeDialog()" mat-flat-button color="primary">CANCEL</button>
+    </div>
+  </div>
+</div>
+ 

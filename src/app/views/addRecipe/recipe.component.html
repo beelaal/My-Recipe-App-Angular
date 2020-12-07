@@ -1,0 +1,74 @@
+<div class="row py-2">
+  <div class="col-12">
+    <div class="card border-0 custom-shadow p-0">
+      <div class="card-body row m-0 p-0">
+        <div class="col-md-7 p-4">
+          <!-- Recipe Form-->
+          <form  [formGroup]="addRecipeForm" (ngSubmit)="onSubmitSaveRecipe()" autocomplete="off">
+              <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                    <mat-form-field>
+                        <input name="name" matInput formControlName="name" placeholder="Name or name" type="name" [(ngModel)]='name' > 
+                        <mat-error align="start" *ngIf="formErrors.name" class="form__error">{{ formErrors.name }}</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+             <!-- Recipe prepration steps -->
+            <div class="form-group">
+            <mat-form-field>
+              <textarea matInput rows="5" placeholder="Prepration Steps or preprationSteps"  formControlName="preprationSteps" [(ngModel)]='preprationSteps' required></textarea>
+              <mat-error align="start" *ngIf="formErrors.preprationSteps" class="form__error">{{ formErrors.preprationSteps }}</mat-error>
+            </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field>
+                <textarea matInput rows="5"  placeholder="Ingredients"  formControlName="ingredients" [(ngModel)]='ingredients' required></textarea>
+                <mat-error align="start" *ngIf="formErrors.ingredients" class="form__error">{{ formErrors.ingredients }}</mat-error>
+              </mat-form-field>
+              </div>
+            <div class="row m-0">
+              <div class="col-md-6 pl-0">
+                <div class="form-group">
+                <mat-form-field>
+                  <input type="number" matInput placeholder="Cooking Time in Minutes" formControlName="cookingTime" required>
+                  <mat-error align="start" *ngIf="formErrors.cookingTime" class="form__error">{{ formErrors.cookingTime }}</mat-error>
+                </mat-form-field>
+                </div>
+              </div>
+              <div class="align-self-center col-md-6 my-3 pr-0 text-center">
+                <input class="d-none" id="choose" type="file" (change)="setImage($event)"
+                  multiple accept='image/*' required/> 
+                <button class="btn upload-btn w-100" type="button" (click)="browse()"><i class="MT-user-upload mr-2" ></i> Upload
+                  image</button>
+              </div>
+            </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                    <mat-form-field>
+                        <input matInput placeholder="Number Of Servings"  formControlName="numberOfServings" required>
+                        <mat-error align="start" *ngIf="formErrors.numberOfServings" class="form__error">{{ formErrors.numberOfServings }}</mat-error>
+                      </mat-form-field>
+                    </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button mat-button class="btn btn-main rounded-pill text-main w-25">Submit</button>
+            </div>
+          </form>
+
+        </div>
+        <!-- Upload Recipe Image -->
+        <div class="col-5 p-3 py-5 adv-bg d-none d-md-block text-center bannar bannar-left-side">
+          <img class="mb-2 rounded-pill w-100 custom-shadow"
+            [src]="uploadimage!= '' || null ?  uploadimage: 'https://tpconnects-localproperty.s3.amazonaws.com/tpconnects-localproperty/1607190115480-ATMqIK.jpg'">
+          <h2>{{name}}</h2>
+          <p>{{preprationSteps}}</p>
+          <p>{{ingredients}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

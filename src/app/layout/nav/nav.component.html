@@ -1,0 +1,45 @@
+<nav class="fixed-top m-0 navbar navbar-expand-md shadow top-fixed" id="mainNav">
+  <div class="container">
+    <button class="navbar-toggler btn-pink" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-list-ul"></i>
+    </button>
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/">My Recipes Book
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mx-auto mt-2 mt-lg-0 snip1189">
+        <!-- Main Page Menu List -->
+        <li class="nav-item">
+          <a class="nav-link" [ngx-scroll-to]="'#home'" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngx-scroll-to]="'#about'" routerLink="/">Recipes List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngx-scroll-to]="'#contact'" routerLink="/">Contact Us</a>
+        </li>
+      </ul> 
+      <!-- Login and logout buttons -->
+      <div class="media ml-sm-auto">
+        <span *ngIf='profileImage'>
+          <div class="d-flex">
+            <img class="p-1 mr-2 img-size " routerLink="/app/dashboard" src="../../../assets/img/login.png" width="50"
+              alt="dashboard">
+            <button class="btn nav_login-btn text-main custom-shadow" (click)="logOut()" type="button">Log Out</button>
+          </div>
+        </span>
+        <span *ngIf='!profileImage'>
+          <div class="d-flex">
+            <img class="p-1 mr-2 img-size" src="../../../assets/img/login.png" width="50"
+              alt="Generic placeholder image">
+            <button class="btn nav_login-btn text-main custom-shadow" routerLink="/login" type="button">Log In</button>
+          </div>
+        </span>
+
+      </div>
+
+    </div>
+  </div>
+</nav>

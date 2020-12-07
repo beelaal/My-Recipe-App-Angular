@@ -1,0 +1,75 @@
+<div class="py-2">
+  <div class="card border-0 custom-shadow p-3">
+      <div class="card-header text-main border-0">List of Recipes</div>
+      <div class="card-body border-0  p-3">
+          <div class="container text-center table-responsive-sm">
+              <mat-form-field>
+                  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Recipes">
+                </mat-form-field>
+                <mat-table [dataSource]="dataSource" #mytable class="my-table mat-elevation-z8"  matSort>
+            
+                  <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                  <!-- Id Column -->
+                  <ng-container matColumnDef="Sr">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Sr. </mat-header-cell>
+                    <mat-cell *matCellDef="let element; let i = index;">  <span class="mobile-label">Sr:</span>{{i+1}} </mat-cell>
+                  </ng-container>
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header>Recipe Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <span class="mobile-label">Recipe Name:</span>{{element.name}} </mat-cell>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="cookingTime">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Cooking Time </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <span class="mobile-label">Cooking Time:</span>{{element.cookingTime}} </mat-cell>
+                  </ng-container>
+                  <!-- Number of servings -->
+                  <ng-container matColumnDef="numberOfServings">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Number Of  Servings </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <span class="mobile-label">EmiratesID:</span>{{element.numberOfServings}} 
+                    </mat-cell>
+                  </ng-container>    
+                  <!-- Image URL -->
+                  <ng-container matColumnDef="image">
+                    <mat-header-cell *matHeaderCellDef> Recipe Image </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> <img [src]="element.image" />  </mat-cell>
+                  </ng-container>
+                  
+                  <!-- Action Column -->
+                  <ng-container matColumnDef="action">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
+                    <mat-cell *matCellDef="let element" class="action-link">  
+                      <button matTooltip="Edit"  matTooltipPosition="above"  mat-mini-fab  [routerLink]="['/app/editrecipe', element.recipe_id]" color="primary" > <mat-icon>edit</mat-icon> </button>
+                        <button matTooltip="View Details" matTooltipPosition="above" mat-mini-fab
+                        placeholder="View"  
+                        (click)="openDialog('Delete',{recipe_id: element.recipe_id})"
+                        color="primary">
+                        <span class="material-icons">
+                          delete
+                          </span>
+                          </button> 
+                    </mat-cell>
+                  </ng-container>
+              
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+              <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+            </div>
+
+      </div>
+  </div>
+</div> 
+
+
+<!-- <app-dialog-box [id]="selectedId"></app-dialog-box> -->
+
+
+
+
+
+
+

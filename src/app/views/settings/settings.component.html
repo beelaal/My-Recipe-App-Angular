@@ -1,0 +1,66 @@
+<div class="py-2">
+  <div class="card border-0 custom-shadow p-3">
+    <div class="card-body border-0  p-3">
+        <div class="row">
+          <div class="col-sm-8">
+              <form class="form_flex" [formGroup]="profileEdit_Form" (ngSubmit)="onSubmitSaveProfile()"  novalidate autocomplete="off">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <div class="form-group">
+                     <mat-form-field class="form_flex" >
+                        <input matInput  formControlName="username" placeholder="User Name">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <div class="form-group">
+                       <mat-form-field>
+                        <input matInput  formControlName="email" placeholder="email">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <div class="form-group"><mat-form-field >
+                        <input matInput  formControlName="first_name" placeholder="First Name">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <div class="form-group"> <mat-form-field>
+                        <input matInput  formControlName="last_name" placeholder="Last Name">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+            <mat-form-field>
+                <input matInput  formControlName="sex"  placeholder = "Gender" required>
+             </mat-form-field>
+              </div>
+              <div class="form-group col-md-6">
+                  <mat-form-field>
+                  <input matInput  formControlName="mobile" placeholder="Phone Number">
+                </mat-form-field>
+              </div>
+            </div> 
+            <div class="row">
+              <div class="form-group col-md-12">
+                  <mat-form-field>
+                      <textarea matInput placeholder="Bio"  formControlName="bio" [(ngModel)]='bio' ></textarea> 
+                    </mat-form-field>
+              </div>
+            </div>
+            <div class="p- mt-3 text-center w-100">
+                <button mat-button type="submit" class="btn btn-main rounded-pill w-25 custom-shadow">Update</button>
+              </div>
+            </form>
+          </div> 
+        </div>
+      
+    </div>
+  </div>
+</div>
+ 
